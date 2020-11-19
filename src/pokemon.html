@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PokeInfo GO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="cabecalho">
+      <nav id="menu">
+        <ul type="disc">
+          <li id="home"><a class="fontePokemon" href="index.html">Home</a></li>
+          <li id="pokemon"><a class="fontePokemon" href="pokemon.html">Pokemón</a></li>
+          <li id="calculadora"><a class="fontePokemon" href="calculadora.html">Calculadora</a></li>
+          <li id="contato"><a class="fontePokemon" href="contato.html">Fale conosco</a></li>
+        </ul>  
+      </nav> 
+      <h1>PokeInfo</h1> 
+      <img id="pokebola" src="imagens/pokebola.png">
+    </header>
+    <section id="">
+      <label for="ordernar"> Ordenar por:</label>
+      <select id="ordernar">
+          <option value="order-az"> Nomes A - Z</option>
+          <option value="order-za"> Nomes Z - A</option>
+          <option value="doces"> Quantidade de Doces para Evoluir</option>
+      </select>
+      <label for="filtro-tipo"> Filtrar por:</label>
+      <select id="filtro-tipo">
+          <option value="Water">Água</option>
+          <option value="Dragon">Dragão</option>
+          <option value="Electric">Elétrico</option>
+          <option value="Ghost">Fantasma</option>
+          <option value="Fire">Fogo</option>
+          <option value="Ice">Gelo</option>
+          <option value="Grass">Grama</option>
+          <option value="Bug">Inseto</option>
+          <option value="Fighting">Lutador</option>
+          <option value="Normal">Normal</option>
+          <option value="Rock">Pedra</option>
+          <option value="Psychic">Psíquico</option>
+          <option value="Ground">Terrestre</option>
+          <option value="Poison">Venenoso</option>
+          <option value="Flying">Voador</option>
+      </select>
+    </section>
+    <main>
+      <div id="card-pokemon"></div>
+      <button id="btn-aparecerPokemon">Aparacer Pokemon</button>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2020 - by Laura Deperon and Luana Santana<br/>
+        <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Laura</a> | <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Luana</a> </p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
