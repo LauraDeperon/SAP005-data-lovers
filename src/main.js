@@ -3,7 +3,6 @@ import { example }
 import data from './data/pokemon/pokemon.js';
 
 const poke = data.pokemon;
-const pokeOrdem = data.pokemon;
 
 function imprimir(pokemon) {
     const listaPokemon = document.getElementById("listaPokemon");
@@ -51,5 +50,93 @@ ordenar.addEventListener("change", function () {
     }
     imprimir(ordem);
 });
+
+const filtrar = document.getElementById("filtroTipo");
+filtrar.addEventListener("change", function () {
+    let filtro = ""
+    console.log("passou")
+   if (filtrar.value == "Water") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "water"
+
+        });
+        imprimir(filtro);
+    } else if (filtrar.value == "Dragon") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "dragon"
+
+        });
+        imprimir(filtro);
+    } else if (filtrar.value == "Electric") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "electric"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Fire") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "fire"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Grass") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "grass"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Bug") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "bug"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Figthing") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "figthing"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Normal") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "normal"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Psychic") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "psychic"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Ground") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "ground"
+
+        });
+        imprimir(filtro);
+    }else if (filtrar.value == "Poison") {
+        filtro = poke.filter(function (indice) {
+
+            return indice.type == "poison"
+
+        });
+        imprimir(filtro);
+    }else{
+        imprimir(poke);
+    }
+    
+});
+
 
 
