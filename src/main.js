@@ -25,24 +25,22 @@ function imprimir(pokemon) {
 
 imprimir(poke);
 const ordenar = document.getElementById("ordenar");
-console.log(ordenar)
 ordenar.addEventListener("change", function () {
     let ordem = ""
-    console.log("passou")
     if (ordenar.value == "ordemA-Z") {
-        ordem = pokeOrdem.sort(function (a, b) {
+        ordem = poke.sort(function (a, b) {
 
             return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
 
         });
     } else if (ordenar.value == "ordemZ-A") {
-        ordem = pokeOrdem.sort(function (a, b) {
+        ordem = poke.sort(function (a, b) {
 
             return (a.name < b.name) ? 1 : ((b.name < a.name) ? -1 : 0);
 
         });
     } else{
-        ordem = pokeOrdem.sort(function (a, b) {
+        ordem = poke.sort(function (a, b) {
 
             return (a.num > b.num) ? 1 : ((b.num > a.num) ? -1 : 0);
 
