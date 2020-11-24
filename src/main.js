@@ -1,9 +1,8 @@
-//import {example} from './data.js';
+//import { example } from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
-const poke = data.pokemon;
-
+let poke = data.pokemon;
 
 window.onload = imprimir;
 
@@ -20,13 +19,10 @@ function imprimir() {
         h2.innerHTML = teste.name
         numero.innerHTML = teste.num
 
-        //document.getElementById("card-pokemon").appendChild(p);
-         card.appendChild(h2)
+        card.appendChild(h2)
         card.appendChild(imagem)
         card.appendChild(numero)
-        document.getElementById("cardPokemon").appendChild(card);
-
-
+        document.getElementById("listaPokemon").appendChild(card);
 
     }
 
