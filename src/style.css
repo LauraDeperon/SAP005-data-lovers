@@ -3,10 +3,6 @@
     font-family: 'FontePokemon';
     src: url(fonts/Pokemon\ Solid.ttf);
 }
-@font-face{
-    font-family: 'FonteGo';
-    src: url(fonts);
-}
 
 body{
     background-image: url(imagens/plano-de-fundo.jpg);
@@ -16,20 +12,20 @@ body{
     text-align: justify;
     font-size: 1.3vw;
     line-height: 1.5;
+    margin-top:3%;
 }
 
 nav#menu ul{
-    display: block;
     list-style: none;
     background-color:#2e68ac;
     border-radius: 5px;
-    width: 46%;
-    margin: 3% 0% 0% 28%;
+    width: 70%;
+    margin-left: 20%;
 }
 
 nav#menu li{
     display: inline-block;
-    padding: 1% 2%;
+    padding: 0.5% 9%;
     transition: background-color 1s;
     border-radius: 5%;
 }
@@ -38,14 +34,13 @@ nav#menu li:hover {
     background-color:#1f417b;
 }
 
-.fontePokemon{
+nav#menu a{
     color: #ffca06;
     text-decoration: none;
     font-family: 'FontePokemon', sans-serif;
-    font-size: 2vw;
+    font-size: 2.3vw;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #1f417b;
-    text-align: center;
 }
 
 header h1{
@@ -60,73 +55,98 @@ header h1{
 
 header img{
     width: 10%;
-    margin: -2% 0% 2% 4%;
+    margin: -2% 0% 2% 5%;
 }
 
 section#resumo{
     background-color:#2e68ac;
     width: 70%;
+    margin: auto;
     display: block;
     border-radius: 5px;
-    margin: 5% auto;
-    padding: 2% 5%;
+    padding: 2% 5% 5% 3%;
     text-indent: 50px;
 }
 
-img{
+section#resumo h2{
+    color: #ffca06;
+    font-family: 'FontePokemon', sans-serif;
+    font-size: 2vw;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #1f417b;
+    text-align: center;
+}
+
+div.dicas{
+    background-color:  #ffca06;
+    display: block;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+div.dicas img{
     width: 40%;
     border-radius: 5%;
     display: block;
     margin: auto;
 }
 
-.dicas{
-    background-color:  #ffca06;
-    display: block;
-    font-size: smaller;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-h3{
+div h3{
     text-align: center;
     color: #2e68ac;
 }
 
 footer{
     clear: both; 
-    border-top: 1px solid #606060; 
+    border-top: 1px solid  #ffca06; 
     text-align: center;
     font-size: small;
+    line-height: 1.5;
 }
 
 footer a{
     text-decoration: none;
     color:  #1f417b;
 }
-
-div#cardPokemon {
-    width: 130px;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background: #2e68ac;
-    padding: 10px;
-    text-align: center;
-    margin: 2% 1%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    display: flex;
-    flex-direction: column;
+ 
+section.container.cards{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: 50px;
 }
 
-div#cardPokemon h2 {
-    font-size: 15px;
+section.cards div {
+    display: block;
+    width: 30%;
+    border-radius: 5px;
+    background: #2e68ac;
+    margin: 1.5%;
     text-transform: capitalize;
 }
-  
-div#cardPokemon img {
-    width: 100%;
+
+section.cards div h2 {
+    font-size: 1.3vw;
+    text-align: center;
+    background: #ffc906e0;
 }
-  
-div#cardPokemon span {
-    font-size: 18px;
+
+section.cards div img {
+    display:block;
+    width: 40%;
+    margin: auto;
+}
+
+
+section.cards div span {
+    background: #ffc906e0;
+}
+
+section.cards div p {
+    background: #ffc906e0;
+}
+
+section.cards div p.tipo {
+    background: #ffc906e0;
+    text-align: center;
 }

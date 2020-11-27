@@ -3,32 +3,72 @@ import { example }
 import data from './data/pokemon/pokemon.js';
 
 const poke = data.pokemon;
+let pcMewtwo = Number(poke[149].stats["max-cp"])
 
 function imprimir(pokemon) {
     const listaPokemon = document.getElementById("listaPokemon");
     listaPokemon.innerHTML = "";
-
+    
     for (let teste of pokemon) {
         let card = document.createElement("div");
         let h2 = document.createElement("h2");
         let imagem = document.createElement("img");
         let numero = document.createElement("span");
+        let tipo = document.createElement("p");
+        tipo.classList.add("tipo")
+        let fraquezas = document.createElement("p");
+        let resistencias = document.createElement("p");
+        let pcMax = teste.stats["max-cp"];
+        let calculoPCMax = document.createElement("footer")
+        let resultadoPCMax = Number((pcMax * 100)/pcMewtwo).toFixed(2)+"%"
+        
         imagem.src = teste.img
         h2.innerHTML = teste.name
-        numero.innerHTML = teste.num
+        numero.innerHTML = "#".bold() + teste.num.bold()
+        tipo.innerHTML = "Tipo: ".bold() + teste.type
+        fraquezas.innerHTML = "Fraqueza: ".bold() + teste.weaknesses
+        resistencias.innerHTML = "Resistência: ".bold() + teste.resistant
+        calculoPCMax.innerHTML = "Esse pokemon tem um PC Máximo de "+String(resultadoPCMax).bold()+" em relação ao pokemon com maior PC Máximo da 1ª geração."
+        
+        
         card.appendChild(h2)
         card.appendChild(imagem)
         card.appendChild(numero)
+        card.appendChild (tipo)
+        card.appendChild(fraquezas)
+        card.appendChild(resistencias)
+           
+
+        if(teste.evolution["next-evolution"]){ 
+            let proxEvolucao = document.createElement("p");
+            proxEvolucao.innerHTML = "Próxima Evolução: ".bold() + teste.evolution["next-evolution"][0].name
+            card.appendChild(proxEvolucao)
+                if(teste.evolution["next-evolution"][0]["next-evolution"]){
+                    let proxEvolucao2 = document.createElement("p");
+                    proxEvolucao2.innerHTML = "Próxima Evolução: ".bold() + teste.evolution["next-evolution"][0]["next-evolution"][0].name
+                    card.appendChild(proxEvolucao2)
+                }
+        }
+        
+        if(teste.evolution["prev-evolution"]){ 
+            let anteriorEvolucao = document.createElement("p");
+            anteriorEvolucao.innerHTML = "Evolução Anterior: ".bold() + teste.evolution["prev-evolution"][0].name
+            card.appendChild(anteriorEvolucao)
+                if(teste.evolution["prev-evolution"][0]["prev-evolution"]){
+                    let anteriorEvolucao2 = document.createElement("p");
+                    anteriorEvolucao2.innerHTML = "Evolução Anterior: ".bold() + teste.evolution["prev-evolution"][0]["prev-evolution"][0].name
+                    card.appendChild(anteriorEvolucao2)
+                }
+        }
+        card.appendChild(calculoPCMax)  
         listaPokemon.appendChild(card)
     }
 }
 
 imprimir(poke);
 const ordenar = document.getElementById("ordenar");
-console.log(ordenar)
 ordenar.addEventListener("change", function () {
     let ordem = ""
-    console.log("passou")
     if (ordenar.value == "ordemA-Z") {
         ordem = poke.sort(function (a, b) {
 
