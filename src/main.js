@@ -10,14 +10,22 @@ function imprimir(pokemon) {
     listaPokemon.innerHTML = "";
     
     for (let teste of pokemon) {
+        let listaCards = document.createElement("div");
+        listaCards.classList.add("flip-container");
+        let flip = document.createElement("div");
+        flip.classList.add("flipper");
         let card = document.createElement("div");
+        card.classList.add("front");
+        let versoCard = document.createElement("div");
+        versoCard.classList.add("back");
         let h2 = document.createElement("h2");
         let imagem = document.createElement("img");
         let numero = document.createElement("span");
         let tipo = document.createElement("p");
-        tipo.classList.add("tipo")
+        tipo.classList.add("tipo");
         let fraquezas = document.createElement("p");
         let resistencias = document.createElement("p");
+        let maximoPC = document.createElement("p");
         let pcMax = teste.stats["max-cp"];
         let calculoPCMax = document.createElement("footer")
         let resultadoPCMax = Number((pcMax * 100)/pcMewtwo).toFixed(2)+"%"
@@ -28,41 +36,47 @@ function imprimir(pokemon) {
         tipo.innerHTML = "Tipo: ".bold() + teste.type
         fraquezas.innerHTML = "Fraqueza: ".bold() + teste.weaknesses
         resistencias.innerHTML = "Resistência: ".bold() + teste.resistant
-        calculoPCMax.innerHTML = "Esse pokemon tem um PC Máximo de "+String(resultadoPCMax).bold()+" em relação ao pokemon com maior PC Máximo da 1ª geração."
-        
+        calculoPCMax.innerHTML = "Esse pokemon tem um PC Máximo de "+String(resultadoPCMax).bold()+" em relação ao pokemon com maior PC Máximo da 1ª geração(Mewtwo)."
+        maximoPC.innerHTML = "PC Máximo: ".bold() + teste.stats["max-cp"];
         
         card.appendChild(h2)
         card.appendChild(imagem)
         card.appendChild(numero)
-        card.appendChild (tipo)
-        card.appendChild(fraquezas)
-        card.appendChild(resistencias)
-           
+        card.appendChild (tipo)        
+
+        versoCard.appendChild(fraquezas)
+        versoCard.appendChild(resistencias)
 
         if(teste.evolution["next-evolution"]){ 
             let proxEvolucao = document.createElement("p");
             proxEvolucao.innerHTML = "Próxima Evolução: ".bold() + teste.evolution["next-evolution"][0].name
-            card.appendChild(proxEvolucao)
+            versoCard.appendChild(proxEvolucao)
                 if(teste.evolution["next-evolution"][0]["next-evolution"]){
                     let proxEvolucao2 = document.createElement("p");
                     proxEvolucao2.innerHTML = "Próxima Evolução: ".bold() + teste.evolution["next-evolution"][0]["next-evolution"][0].name
-                    card.appendChild(proxEvolucao2)
+                    versoCard.appendChild(proxEvolucao2)
                 }
         }
         
         if(teste.evolution["prev-evolution"]){ 
             let anteriorEvolucao = document.createElement("p");
             anteriorEvolucao.innerHTML = "Evolução Anterior: ".bold() + teste.evolution["prev-evolution"][0].name
-            card.appendChild(anteriorEvolucao)
+            versoCard.appendChild(anteriorEvolucao)
                 if(teste.evolution["prev-evolution"][0]["prev-evolution"]){
                     let anteriorEvolucao2 = document.createElement("p");
                     anteriorEvolucao2.innerHTML = "Evolução Anterior: ".bold() + teste.evolution["prev-evolution"][0]["prev-evolution"][0].name
-                    card.appendChild(anteriorEvolucao2)
+                    versoCard.appendChild(anteriorEvolucao2)
                 }
         }
-        card.appendChild(calculoPCMax)  
-        listaPokemon.appendChild(card)
+        
+        versoCard.appendChild(maximoPC)
+        versoCard.appendChild(calculoPCMax)  
+        flip.appendChild(card)
+        flip.appendChild(versoCard)
+        listaCards.appendChild(flip)
+        listaPokemon.appendChild(listaCards)
     }
+    console.log(listaPokemon)
 }
 
 imprimir(poke);
@@ -94,81 +108,80 @@ ordenar.addEventListener("change", function () {
 const filtrar = document.getElementById("filtroTipo");
 filtrar.addEventListener("change", function () {
     let filtro = ""
-    console.log("passou")
    if (filtrar.value == "Water") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "water"
+            return indice.type[0] == "water" 
 
         });
         imprimir(filtro);
     } else if (filtrar.value == "Dragon") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "dragon"
+            return indice.type[0] == "dragon"
 
         });
         imprimir(filtro);
     } else if (filtrar.value == "Electric") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "electric"
+            return indice.type[0] == "electric"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Fire") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "fire"
+            return indice.type[0] == "fire"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Grass") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "grass"
+            return indice.type[0] == "grass"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Bug") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "bug"
+            return indice.type[0] == "bug"
 
         });
         imprimir(filtro);
-    }else if (filtrar.value == "Figthing") {
+    }else if (filtrar.value == "Fighting") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "figthing"
+            return indice.type[0] == "fighting"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Normal") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "normal"
+            return indice.type[0] == "normal"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Psychic") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "psychic"
+            return indice.type[0] == "psychic"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Ground") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "ground"
+            return indice.type[0] == "ground"
 
         });
         imprimir(filtro);
     }else if (filtrar.value == "Poison") {
         filtro = poke.filter(function (indice) {
 
-            return indice.type == "poison"
+            return indice.type[0] == "poison"
 
         });
         imprimir(filtro);
