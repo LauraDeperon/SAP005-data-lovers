@@ -112,12 +112,14 @@ footer a{
 #listaPokemon {
     display:flex;
     flex-flow: row wrap;
+    align-items: center;
     margin-top: 50px;
+    
 }
 
 .flip-container {
     width: 280px;
-    height: 380px;
+    height: 420px;
     perspective: 1000px;
     margin:auto;
   }
@@ -172,7 +174,37 @@ div.back p {
     padding: 1%;
 }
 
-div.front p.tipo {
+div.front p {
     background: #ffc906e0;
     text-align: center;
+}
+
+form{
+    margin: 5% 20%;
+    line-height: 2;
+}
+
+input#idade{
+    width: 12%;
+}
+
+input#telefone{
+    width: 38%;
+}
+
+input#email{
+    width: 70%;
+}
+
+form img{
+    display: block;
+    float: rigth;
+    width: 40%;
+    margin: 14% auto;
+    border-radius: 5px;
+}
+
+form div{
+    display: block;
+    float: left;
 }
