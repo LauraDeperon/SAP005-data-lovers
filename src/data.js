@@ -3,7 +3,7 @@
 export const ordenarPoke = (poke,selecaoOrdem) => {
   const ordemAZ = (a, b) => (a["name"]).localeCompare(b["name"]);
   const ordemZA = (a, b) => (a["name"]).localeCompare(b["name"]);
-  const ordemCrescente = (a, b) => Number((a["num"]).localeCompare(b["num"]));
+  const ordemCrescente = (a, b) => (a["num"]).localeCompare(b["num"]);
   switch(selecaoOrdem){
     case "ordemA-Z":
       return poke.sort((a,b) => ordemAZ(a, b));

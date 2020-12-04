@@ -1,48 +1,5 @@
 import { calculoAgregado, filtroTipo, ordenarPoke, pesquisarPoke } from '../src/data.js';
-
-const alunas = [{
-  "num": "001",
-  "name": "Carol",
-  "dados": {
-    "idade": "27",
-    "ano-nascimento": "1993",
-    "altura": "172",
-    "peso": "62"
-  },
-  "type": [
-   "dança",
-   "pintura"
-  ]
-},
-{
-  "num": "002",
-  "name": "Amanda",
-  "dados": {
-    "idade": "38",
-    "ano-nascimento": "1982",
-    "altura": "160",
-    "peso": "58"
-  },
-  "type": [
-   "dança",
-   "futebol"
-  ]
-},
-{
-  "num": "003",
-  "name": "Natasha",
-  "dados": {
-    "idade": "18",
-    "ano-nascimento": "2002",
-    "altura": "175",
-    "peso": "80"
-  },
-  "type": [
-   "futebol",
-   "pintura"
-  ]
-}];
-
+import { alunas, Carol, Amanda, Natasha } from '../src/api.js';
 
 describe('function pesquisarPoke', () => {
   it('is a function', () => {
@@ -50,20 +7,7 @@ describe('function pesquisarPoke', () => {
   });
 
   it('returns ´pesquisarPoke´', () => {
-    expect(pesquisarPoke(alunas, "nat")).toStrictEqual([{
-      "num": "003",
-      "name": "Natasha",
-      "dados": {
-        "idade": "18",
-        "ano-nascimento": "2002",
-        "altura": "175",
-        "peso": "80"
-      },
-      "type": [
-       "futebol",
-       "pintura"
-      ]
-    }]);
+    expect(pesquisarPoke(alunas, "nat")).toStrictEqual([Natasha]);
   });
 });
 
@@ -73,134 +17,15 @@ describe('function ordenarPoke', () => {
   });
 
   it('returns ´ordenarPoke´ for case "ordemA-Z"', () => {
-    expect(ordenarPoke(alunas, "ordemA-Z")).toStrictEqual([{
-      "num": "002",
-      "name": "Amanda",
-      "dados": {
-        "idade": "38",
-        "ano-nascimento": "1982",
-        "altura": "160",
-        "peso": "58"
-      },
-      "type": [
-       "dança",
-       "futebol"
-      ]
-    },
-    {"num": "001",
-      "name": "Carol",
-      "dados": {
-        "idade": "27",
-       "ano-nascimento": "1993",
-       "altura": "172",
-       "peso": "62"
-      },
-     "type": [
-       "dança",
-       "pintura"
-      ]
-    },
-    { "num": "003",
-      "name": "Natasha",
-      "dados": {
-        "idade": "18",
-        "ano-nascimento": "2002",
-        "altura": "175",
-        "peso": "80"
-      },
-      "type": [
-       "futebol",
-       "pintura"
-      ]
-    }]);
+    expect(ordenarPoke(alunas, "ordemA-Z")).toStrictEqual([Amanda, Carol, Natasha]);
   });
 
   it('returns ´ordenarPoke´ for case ordemZ-A', () => {
-    expect(ordenarPoke(alunas, "ordemZ-A")).toStrictEqual([{ 
-      "num": "003",
-      "name": "Natasha",
-      "dados": {
-        "idade": "18",
-        "ano-nascimento": "2002",
-        "altura": "175",
-        "peso": "80"
-      },
-      "type": [
-       "futebol",
-       "pintura"
-      ]
-    },
-    {"num": "001",
-      "name": "Carol",
-      "dados": {
-        "idade": "27",
-       "ano-nascimento": "1993",
-       "altura": "172",
-       "peso": "62"
-      },
-     "type": [
-       "dança",
-       "pintura"
-      ]
-    },
-    {"num": "002",
-      "name": "Amanda",
-      "dados": {
-        "idade": "38",
-        "ano-nascimento": "1982",
-        "altura": "160",
-        "peso": "58"
-      },
-      "type": [
-       "dança",
-       "futebol"
-      ]
-    }]);
+    expect(ordenarPoke(alunas, "ordemZ-A")).toStrictEqual([Natasha, Carol, Amanda]);
   });
 
   it('returns ´ordenarPoke´ for case "ordemCrescente', () => {
-    expect(ordenarPoke(alunas, "ordemCrescente")).toStrictEqual([{
-      "num": "001",
-      "name": "Carol",
-      "dados": {
-        "idade": "27",
-        "ano-nascimento": "1993",
-        "altura": "172",
-        "peso": "62"
-      },
-      "type": [
-       "dança",
-       "pintura"
-      ]
-    },
-    {
-      "num": "002",
-      "name": "Amanda",
-      "dados": {
-        "idade": "38",
-        "ano-nascimento": "1982",
-        "altura": "160",
-        "peso": "58"
-      },
-      "type": [
-       "dança",
-       "futebol"
-      ]
-    },
-    {
-      "num": "003",
-      "name": "Natasha",
-      "dados": {
-        "idade": "18",
-        "ano-nascimento": "2002",
-        "altura": "175",
-        "peso": "80"
-      },
-      "type": [
-       "futebol",
-       "pintura"
-      ]
-    }]);
+    expect(ordenarPoke(alunas, "ordemCrescente")).toStrictEqual([Carol, Amanda, Natasha]);
   });
 });
 
@@ -210,34 +35,7 @@ describe('function filtroTipo', () => {
   });
 
   it('returns ´filtroTipo´', () => {
-    expect(filtroTipo(alunas, "futebol")).toStrictEqual([{
-      "num": "002",
-      "name": "Amanda",
-      "dados": {
-        "idade": "38",
-        "ano-nascimento": "1982",
-        "altura": "160",
-        "peso": "58"
-      },
-      "type": [
-       "dança",
-       "futebol"
-      ]
-    },
-    {
-      "num": "003",
-      "name": "Natasha",
-      "dados": {
-        "idade": "18",
-        "ano-nascimento": "2002",
-        "altura": "175",
-        "peso": "80"
-      },
-      "type": [
-       "futebol",
-       "pintura"
-      ]
-    }]);
+    expect(filtroTipo(alunas, "futebol")).toStrictEqual([Amanda, Natasha]);
   });
 });
 
