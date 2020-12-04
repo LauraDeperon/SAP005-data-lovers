@@ -1,28 +1,56 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PokeInfo GO</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header id="cabecalho">
-      <nav id="menu">
-        <ul type="disc">
-          <li id="home"><a class="fontePokemon" href="index.html">Home</a></li>
-          <li id="pokemon"><a class="fontePokemon" href="pokemon.html">Pokemón</a></li>
-          <li id="calculadora"><a class="fontePokemon" href="calculadora.html">Calculadora</a></li>
-          <li id="contato"><a class="fontePokemon" href="contato.html">Fale conosco</a></li>
-        </ul>  
-      </nav> 
-      <h1>PokeInfo</h1> 
-      <img id="pokebola" src="imagens/pokebola.png">
-    </header>
-    <footer>
-        <p>Copyright &copy; 2020 - by Laura Deperon and Luana Santana<br/>
-          <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Laura</a> | 
-          <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Luana</a> </p>
-      </footer>
-      <script src="main.js" type="module"></script>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>PokeInfo GO</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header id="cabecalho">
+    <nav id="menu">
+      <ul type="disc">
+        <li id="home"><a class="fontePokemon" href="index.html">Home</a></li>
+        <li id="pokemon"><a class="fontePokemon" href="pokemon.html">Pokemón</a></li>
+        <li id="contato"><a class="fontePokemon" href="contato.html">Fale conosco</a></li>
+      </ul>
+    </nav>
+    <h1>PokeInfo</h1>
+    <img id="pokebola" src="imagens/pokebola.png">
+  </header>
+  <main>
+    <form>
+      <fieldset>
+        <legend>Contato</legend>
+        <div>
+          <label for="nome">Nome:*</label>
+          <input id="nome" type="text" placeholder="Digite seu nome completo" required><br>
+
+          <label for="idade">Idade:</label>
+          <input id="idade" type="number" min="1"><br>
+
+          <label for="telefone">Telefone:</label>
+          <input id="telefone" type="tel" placeholder="(99)99999-9999"><br>
+
+          <label for="email">E-mail:*</label>
+          <input id="email" type="email" placeholder="Digite um e-mail válido" required><br>
+
+          <label for="mensagem">Mensagem:*</label><br>
+          <textarea id="mensagem" type="text" cols="35" rows="8"
+            placeholder="Digite aqui sua crítica, sugestão ou elogio." required></textarea> <br>
+
+          <button id="btnEnviar">Enviar</button>
+        </div>
+        <img src="imagens/contato.png">
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2020 - by Laura Deperon and Luana Santana<br />
+      <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Laura</a> |
+      <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Luana</a> </p>
+  </footer>
+</body>
+
 </html>
