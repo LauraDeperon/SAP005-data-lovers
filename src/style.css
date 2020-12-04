@@ -10,7 +10,7 @@ body{
     background-size: cover;
     font-family: arial, sans-serif;
     text-align: justify;
-    font-size: 1.3vw;
+    font-size: 17px;
     line-height: 1.5;
     margin-top:3%;
 }
@@ -18,8 +18,8 @@ body{
 nav#menu ul{
     list-style: none;
     background-color:#2e68ac;
-    border-radius: 5px;
-    width: 70%;
+    border-radius: 20px;
+    width: 65%;
     margin-left: 20%;
 }
 
@@ -38,7 +38,7 @@ nav#menu a{
     color: #ffca06;
     text-decoration: none;
     font-family: 'FontePokemon', sans-serif;
-    font-size: 2.3vw;
+    font-size: 25px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #1f417b;
 }
@@ -65,13 +65,13 @@ section#resumo{
     display: block;
     border-radius: 5px;
     padding: 2% 5% 5% 3%;
-    text-indent: 50px;
+    text-indent: 8%;
 }
 
 section#resumo h2{
     color: #ffca06;
     font-family: 'FontePokemon', sans-serif;
-    font-size: 2vw;
+    font-size: 25px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #1f417b;
     text-align: center;
@@ -119,7 +119,7 @@ footer a{
 
 .flip-container {
     width: 280px;
-    height: 420px;
+    height: 400px;
     perspective: 1000px;
     margin:auto;
   }
@@ -144,7 +144,7 @@ footer a{
     text-transform: capitalize;
     border-radius: 5px;
     background: #2e68ac;
-    padding: 0% 2%;
+    
 }
 
 .back{
@@ -152,7 +152,7 @@ footer a{
 }
 
 div.front h2 {
-    font-size: 1.3vw;
+    font-size: 20px;
     text-align: center;
     background: #ffc906e0;
 }
@@ -180,7 +180,7 @@ div.front p {
 }
 
 form{
-    margin: 5% 20%;
+    margin: 0% 20%;
     line-height: 2;
 }
 
@@ -197,7 +197,7 @@ input#email{
 }
 
 form img{
-    display: block;
+    display: flex;
     float: rigth;
     width: 40%;
     margin: 14% auto;
@@ -207,4 +207,150 @@ form img{
 form div{
     display: block;
     float: left;
+}
+
+    @media (min-width:800px) and (max-width:1000px){
+    body {
+       font-size: 16px;
+    }
+    div.dicas img{
+        width: 80%;
+    } 
+    nav#menu li{
+            padding: 0.5% 8.0%;
+    }
+    nav#menu a{
+        font-size: 19px;
+    }
+    section#resumo h2{
+        font-size: 20px;
+    }
+    .flip-container {
+        width: 240px;
+        height: 405px;
+        margin-right: auto;
+    }
+    div.front h2 {
+    font-size: 20px;
+    }
+}
+    @media (min-width:500px) and (max-width:800px){
+    body {
+        font-size: 15px;
+     }
+     div.dicas img{
+         width: 90%;
+     } 
+     nav#menu li{
+        padding: 0.5% 5.0%;
+     }
+     nav#menu a{
+    font-size: 17px;
+     }
+     section#interacoes {
+         font-size: 15px;
+     }
+     
+     .flip-container {
+         width: 220px;
+         height: 380px;
+     }
+     form img{
+        width: 60%;
+
+     }
+
+}
+
+@media (min-width:320px) and (max-width:500px){
+    body {
+       font-size: 12px;
+    }
+    header h1{
+        font-size: 20px;
+        margin-top: -90px;
+        margin-left: 40px;
+
+    }
+    header img{
+        width: 20%;
+        margin-left: 50px;
+    }
+
+    div.dicas img{
+        width: 100%;
+    } 
+    nav#menu ul{
+        border-radius: 20px;
+        width: 30%;
+        margin-left: 140px;
+    }
+    nav#menu li{
+            padding: 0.5% 1.0%;
+            width: 60%;                   
+    }
+    nav#menu a{
+        font-size: 14px;
+    }
+    section#interacoes {
+        font-size: 12px;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    #interacoes label {
+        justify-content: start;
+    }
+
+
+    input#pesquisar {
+        width: 250px;
+
+    }
+    section#resumo {
+        margin-top: 20px;
+    }
+
+    section#resumo h2{
+        font-size: 16px;
+        
+    }
+    .flip-container {
+        width: 220px;
+        height: 340px;
+        margin-right: auto;
+    }
+    div.front h2 {
+    font-size: 15px;
+    text-align: center;
+    }
+    input#nome {
+        width: 150px;
+        margin-bottom: 10px;
+
+    }
+    input#email {
+        width: 200px;
+        margin-bottom: 10px;
+
+    }
+    input#telefone {
+        margin-bottom: 10px;
+    }
+    input#idade {
+        margin-bottom: 10px;
+    }
+    textarea#mensagem {
+        width: 220px;
+        margin-bottom: 10px;
+    }
+    fieldset {
+        margin-left: -30px;
+    }
+    form img{
+        width: 80%;
+
+
+     }
 }
