@@ -27,7 +27,7 @@ Há também uma aba de fale conosco, para o usuário poder dar seu feedback sobr
 
 ![faleconosco](src\imagens\fale-conosco.png)
 
-Para utilizar o PokeInfo Go (clique aqui)[https://lauradeperon.github.io/SAP005-data-lovers/src/]
+Para utilizar o PokeInfo Go [clique aqui!](https://lauradeperon.github.io/SAP005-data-lovers/src/)
 
 ***
 
