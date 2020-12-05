@@ -34,8 +34,11 @@ Para utilizar o PokeInfo Go [clique aqui!](https://lauradeperon.github.io/SAP005
 ## História de Usúario.
 
 ![usuario1](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia1.jpg)
+
 ![usuario2](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia2.jpg)
+
 ![usuario3](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia3.jpg)
+
 ![usuario4](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia4.jpg)
 
 ***
@@ -45,7 +48,11 @@ Para utilizar o PokeInfo Go [clique aqui!](https://lauradeperon.github.io/SAP005
 De início idealizamos um protótipo de baixa fidelidade para interface.
 
 ![prototipoinformacoes](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo1.jpg)
+
+
 ![prototipocards](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo2.jpg)
+
+
 ![prototipofaleconosco](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo3.jpg)
 
 ***
