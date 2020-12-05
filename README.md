@@ -17,7 +17,7 @@ O PokeInfo foi destinado para busca de informações sobre todos os Pokémon de 
     
 Além de pesquisar os Pokémon escrevendo seu respectivo nome, você também poderá consulta-los por tipo e ordená-los em ordem alfabética de A-Z e de Z-A. Contando com um cálculo de quantos por cento cada Pokémon tem de PC Máximo em relação ao Pokémon que pode atingir o maior PC da geração de Kanto(Mewtwo).
 
-![informacoes](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/info-pokemon.png =250x)
+![informacoes](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/info-pokemon.png)
 
 O Home do site conta com uma breve descrição do mesmo e algumas dicas para jogar Pokémon Go. 
 
@@ -49,10 +49,10 @@ De início idealizamos um protótipo de baixa fidelidade para interface.
 
 ![prototipoinformacoes](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo1.jpg)
 
-
+***
 ![prototipocards](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo2.jpg)
 
-
+***
 ![prototipofaleconosco](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo3.jpg)
 
 ***
