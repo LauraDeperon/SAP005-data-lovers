@@ -1,356 +1,313 @@
 @charset "UTF-8";
-@font-face{
-    font-family: 'FontePokemon';
-    src: url(fonts/Pokemon\ Solid.ttf);
+
+@font-face {
+  font-family: 'FontePokemon';
+  src: url(fonts/Pokemon\ Solid.ttf);
 }
 
-body{
-    background-image: url(imagens/plano-de-fundo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: arial, sans-serif;
-    text-align: justify;
-    font-size: 17px;
-    line-height: 1.5;
-    margin-top:3%;
+body {
+  background-image: url(imagens/plano-de-fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: arial, sans-serif;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-top: 3%;
 }
 
-nav#menu ul{
-    list-style: none;
-    background-color:#2e68ac;
-    border-radius: 20px;
-    width: 65%;
-    margin-left: 20%;
+#menu ul {
+  list-style: none;
+  background-color: #2e68ac;
+  border-radius: 20px;
+  width: 20%;
+  margin: -2% 0% 0% 20%;
+  padding-left: 60%;
 }
 
-nav#menu li{
-    display: inline-block;
-    padding: 0.5% 9%;
-    transition: background-color 1s;
-    border-radius: 5%;
+#menu li {
+  display: inline-block;
+  transition: background-color 1s;
+  border-radius: 5%;
+  padding: 0% 7%;
 }
 
-nav#menu li:hover {
-    background-color:#1f417b;
+#menu li:hover {
+  background-color: #1f417b;
 }
 
-nav#menu a{
-    color: #ffca06;
-    text-decoration: none;
-    font-family: 'FontePokemon', sans-serif;
-    font-size: 25px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #1f417b;
+#menu a {
+  color: #ffca06;
+  text-decoration: none;
+  font-family: 'FontePokemon', sans-serif;
+  font-size: 25px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1f417b;
 }
 
-header h1{
-    font-family: 'FontePokemon', sans-serif;
-    text-shadow: 5px 5px #1f417b;
-    color: #ffca06;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #2e68ac;
-    font-size: 4vw;
-    margin-top: -8% ;
+header h1 {
+  font-family: 'FontePokemon', sans-serif;
+  text-shadow: 5px 5px #1f417b;
+  color: #ffca06;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2e68ac;
+  font-size: 4vw;
+  margin-top: -4%
 }
 
-header img{
-    width: 10%;
-    margin: -2% 0% 2% 5%;
+header img {
+  width: 10%;
+  margin: -2% 0% 2% 5%;
 }
 
-section#resumo{
-    background-color:#2e68ac;
-    width: 70%;
-    margin: auto;
-    display: block;
-    border-radius: 5px;
-    padding: 2% 5% 5% 3%;
-    text-indent: 8%;
+#resumo {
+  background-color: #2e68ac;
+  width: 70%;
+  margin: auto;
+  display: block;
+  border-radius: 5px;
+  padding: 2% 5% 5% 3%;
+  text-indent: 8%;
 }
 
-section#resumo h2{
-    color: #ffca06;
-    font-family: 'FontePokemon', sans-serif;
-    font-size: 25px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #1f417b;
-    text-align: center;
+#resumo h2 {
+  color: #ffca06;
+  font-family: 'FontePokemon', sans-serif;
+  font-size: 25px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1f417b;
+  text-align: center;
 }
 
-div.dicas{
-    background-color:  #ffca06;
-    display: block;
-    border-radius: 5px;
-    padding: 15px;
+div.dicas {
+  background-color: #ffca06;
+  display: block;
+  border-radius: 5px;
+  padding: 15px;
 }
 
-div.dicas img{
-    width: 40%;
-    border-radius: 5%;
-    display: block;
-    margin: auto;
+div.dicas img {
+  width: 40%;
+  border-radius: 5%;
+  display: block;
+  margin: auto;
 }
 
-div h3{
-    text-align: center;
-    color: #2e68ac;
+div h3 {
+  text-align: center;
+  color: #2e68ac;
 }
 
-footer{
-    clear: both; 
-    border-top: 1px solid  #ffca06; 
-    text-align: center;
-    font-size: small;
-    line-height: 1.5;
+footer {
+  clear: both;
+  border-top: 1px solid #ffca06;
+  text-align: center;
+  font-size: small;
+  line-height: 1.5;
 }
 
-footer a{
-    text-decoration: none;
-    color:  #1f417b;
+footer a {
+  text-decoration: none;
+  color: #1f417b;
 }
- 
+
 #listaPokemon {
-    display:flex;
-    flex-flow: row wrap;
-    align-items: center;
-    margin-top: 50px;
-    
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 50px;
+
 }
 
 .flip-container {
-    width: 280px;
-    height: 400px;
-    perspective: 1000px;
-    margin:auto;
+  width: 280px;
+  height: 400px;
+  perspective: 1000px;
+  margin: auto;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  backface-visibility: hidden;
+  text-transform: capitalize;
+  border-radius: 5px;
+  background: #2e68ac;
+
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.front h2 {
+  font-size: 20px;
+  text-align: center;
+  background: #ffc906e0;
+}
+
+.front img {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+
+.front span {
+  background: #ffc906e0;
+}
+
+.back p {
+  background: #ffc906e0;
+  line-height: 1;
+  padding: 1%;
+}
+
+.front p {
+  background: #ffc906e0;
+  text-align: center;
+}
+
+@media (min-width:800px) and (max-width:1000px) {
+  body {
+    font-size: 16px;
   }
 
-  .flipper{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
+  .dicas img {
+    width: 80%;
+  }
 
-.flip-container:hover .flipper{
-    transform: rotateY(180deg);
-}
+  #menu li {
+    padding: 0.5% 8.0%;
+  }
 
-.front, .back{
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    backface-visibility: hidden;
-    text-transform: capitalize;
-    border-radius: 5px;
-    background: #2e68ac;
-    
-}
+  #menu a {
+    font-size: 19px;
+  }
 
-.back{
-    transform: rotateY(180deg);
-}
-
-div.front h2 {
+  #resumo h2 {
     font-size: 20px;
-    text-align: center;
-    background: #ffc906e0;
-}
+  }
 
-div.front img {
-    display:block;
-    width: 50%;
-    margin: auto;
-}
+  .flip-container {
+    width: 240px;
+    height: 405px;
+    margin-right: auto;
+  }
 
-
-div.front span {
-    background: #ffc906e0;
-}
-
-div.back p {
-    background: #ffc906e0;
-    line-height: 1;
-    padding: 1%;
-}
-
-div.front p {
-    background: #ffc906e0;
-    text-align: center;
-}
-
-form{
-    margin: 0% 20%;
-    line-height: 2;
-}
-
-input#idade{
-    width: 12%;
-}
-
-input#telefone{
-    width: 38%;
-}
-
-input#email{
-    width: 70%;
-}
-
-form img{
-    display: flex;
-    float: rigth;
-    width: 40%;
-    margin: 14% auto;
-    border-radius: 5px;
-}
-
-form div{
-    display: block;
-    float: left;
-}
-
-    @media (min-width:800px) and (max-width:1000px){
-    body {
-       font-size: 16px;
-    }
-    div.dicas img{
-        width: 80%;
-    } 
-    nav#menu li{
-            padding: 0.5% 8.0%;
-    }
-    nav#menu a{
-        font-size: 19px;
-    }
-    section#resumo h2{
-        font-size: 20px;
-    }
-    .flip-container {
-        width: 240px;
-        height: 405px;
-        margin-right: auto;
-    }
-    div.front h2 {
+  .front h2 {
     font-size: 20px;
-    }
+  }
 }
-    @media (min-width:500px) and (max-width:800px){
-    body {
-        font-size: 15px;
-     }
-     div.dicas img{
-         width: 90%;
-     } 
-     nav#menu li{
-        padding: 0.5% 5.0%;
-     }
-     nav#menu a{
+
+@media (min-width:500px) and (max-width:800px) {
+  body {
+    font-size: 15px;
+  }
+
+  .dicas img {
+    width: 90%;
+  }
+
+  #menu li {
+    padding: 0.5% 5.0%;
+  }
+
+  #menu a {
     font-size: 17px;
-     }
-     section#interacoes {
-         font-size: 15px;
-     }
-     
-     .flip-container {
-         width: 220px;
-         height: 380px;
-     }
-     form img{
-        width: 60%;
+  }
 
-     }
+  #interacoes {
+    font-size: 15px;
+  }
 
+  .flip-container {
+    width: 220px;
+    height: 380px;
+  }
 }
 
-@media (min-width:320px) and (max-width:500px){
-    body {
-       font-size: 12px;
-    }
-    header h1{
-        font-size: 20px;
-        margin-top: -90px;
-        margin-left: 40px;
+@media (min-width:320px) and (max-width:500px) {
+  body {
+    font-size: 12px;
+  }
 
-    }
-    header img{
-        width: 20%;
-        margin-left: 50px;
-    }
+  header h1 {
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: 40px;
+  }
 
-    div.dicas img{
-        width: 100%;
-    } 
-    nav#menu ul{
-        border-radius: 20px;
-        width: 30%;
-        margin-left: 140px;
-    }
-    nav#menu li{
-            padding: 0.5% 1.0%;
-            width: 60%;                   
-    }
-    nav#menu a{
-        font-size: 14px;
-    }
-    section#interacoes {
-        font-size: 12px;
-        width: 80px;
-        display: flex;
-        flex-direction: column;
+  header img {
+    width: 20%;
+    margin-left: 50px;
+  }
 
-    }
-    #interacoes label {
-        justify-content: start;
-    }
+  .dicas img {
+    width: 100%;
+  }
 
+  #menu ul {
+    border-radius: 20px;
+    width: 30%;
+    margin-left: 140px;
+    padding-left: 5%;
+  }
 
-    input#pesquisar {
-        width: 250px;
+  #menu li {
+    padding: 0.5% 1.0%;
+    width: 60%;
+  }
 
-    }
-    section#resumo {
-        margin-top: 20px;
-    }
+  #menu a {
+    font-size: 14px;
+  }
 
-    section#resumo h2{
-        font-size: 16px;
-        
-    }
-    .flip-container {
-        width: 220px;
-        height: 340px;
-        margin-right: auto;
-    }
-    div.front h2 {
+  #interacoes {
+    font-size: 12px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #interacoes label {
+    justify-content: start;
+  }
+
+  #pesquisar {
+    width: 250px;
+  }
+
+  #resumo {
+    margin-top: 20px;
+  }
+
+  #resumo h2 {
+    font-size: 16px;
+  }
+
+  .flip-container {
+    width: 220px;
+    height: 340px;
+    margin-right: auto;
+  }
+
+  .front h2 {
     font-size: 15px;
     text-align: center;
-    }
-    input#nome {
-        width: 150px;
-        margin-bottom: 10px;
-
-    }
-    input#email {
-        width: 200px;
-        margin-bottom: 10px;
-
-    }
-    input#telefone {
-        margin-bottom: 10px;
-    }
-    input#idade {
-        margin-bottom: 10px;
-    }
-    textarea#mensagem {
-        width: 220px;
-        margin-bottom: 10px;
-    }
-    fieldset {
-        margin-left: -30px;
-    }
-    form img{
-        width: 80%;
-
-
-     }
+  }
 }

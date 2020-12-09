@@ -17,26 +17,25 @@ O PokeInfo foi destinado para busca de informações sobre todos os Pokémon de 
     
 Além de pesquisar os Pokémon escrevendo seu respectivo nome, você também poderá consulta-los por tipo e ordená-los em ordem alfabética de A-Z e de Z-A. Contando com um cálculo de quantos por cento cada Pokémon tem de PC Máximo em relação ao Pokémon que pode atingir o maior PC da geração de Kanto(Mewtwo).
 
-![informacoes](src\imagens\info-pokemon.png)
+![informacoes](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/info-pokemon.png)
 
 O Home do site conta com uma breve descrição do mesmo e algumas dicas para jogar Pokémon Go. 
 
-![paginainicial](src\imagens\pagina-inicial.png)
+![paginainicial](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/pagina-inicial.png)
 
-Há também uma aba de fale conosco, para o usuário poder dar seu feedback sobre o site, como críticas, elogios ou sugestões.
-
-![faleconosco](src\imagens\fale-conosco.png)
-
-Para utilizar o PokeInfo Go (clique aqui)[https://lauradeperon.github.io/SAP005-data-lovers/src/]
+Para utilizar o PokeInfo Go [clique aqui!](https://lauradeperon.github.io/SAP005-data-lovers/src/)
 
 ***
 
 ## História de Usúario.
 
-![usuario1](src\imagens\historia1.jpg)
-![usuario2](src\imagens\historia2.jpg)
-![usuario3](src\imagens\historia3.jpg)
-![usuario4](src\imagens\historia4.jpg)
+![usuario1](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia1.jpg)
+
+![usuario2](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia2.jpg)
+
+![usuario3](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia3.jpg)
+
+![usuario4](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/historia4.jpg)
 
 ***
 
@@ -44,9 +43,10 @@ Para utilizar o PokeInfo Go (clique aqui)[https://lauradeperon.github.io/SAP005-
 
 De início idealizamos um protótipo de baixa fidelidade para interface.
 
-![prototipoinformacoes](src\imagens\prototipo1.jpg)
-![prototipocards](src\imagens\prototipo2.jpg)
-![prototipofaleconosco](src\imagens\prototipo3.jpg)
+![prototipoinformacoes](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo1.jpg)
+
+***
+![prototipocards](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/prototipo2.jpg)
 
 ***
 
@@ -64,7 +64,7 @@ Foram realizados diversos testes de usabilidade durante a construção do projet
 
 A Paleta de cores foi definida conforme as cores originais do Pokemon GO.
 
-![Paletadecores](src\imagens\paletadecores.jpeg)
+![Paletadecores](https://github.com/LauraDeperon/SAP005-data-lovers/blob/master/src/imagens/paletadecores.jpeg)
 
 ***
 
